@@ -13,6 +13,7 @@ export default class EditQuestion extends Component {
     componentWillMount(){
         this.get()
     }
+    
     render(){
        
 

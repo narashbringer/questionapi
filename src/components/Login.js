@@ -19,7 +19,7 @@ export default class Login  extends Component {
             </div>
             <div className="form-group">
                 <label>Password</label>
-                    <input className="inputs" id="Password" value={this.state.password} onChange={pass => this.updatepassword(pass)}></input>
+                    <input className="inputs" id="Password" value={this.state.password} onChange={passa => this.updatepassword(passa)}></input>
             </div>
             <div className="submit-group">
                 <button className="button" onClick={()=>this.login()}>Login</button>
@@ -30,18 +30,15 @@ export default class Login  extends Component {
     updateEmail(email){
         this.setState({
             Email:email.target.value
-        })
+        });
     };
     updatepassword(pass){
         this.setState({
             password:pass.target.value
-        })
+        });
     };
-    updatepassword2(pass2){
-        this.setState({
-            password2:pass2.target.value
-        })
-    };
+
+
     login(){
         var name =this.state.Email
         var pass= this.state.password

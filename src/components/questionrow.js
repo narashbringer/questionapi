@@ -11,8 +11,8 @@ export default class Questionrow  extends Component {
 
     render() {
         return(
-<tr className="clickable">
-<td>{this.props.val.question}
+<tr className="Cardwhite">
+<td><span>{this.props.val.question}</span>
 </td>
 <td className="hidden-xs hidden-sm hidden-md">
   <span>{this.props.val.answer}</span>

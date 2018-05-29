@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Questionrow from './questionrow.js'
-
+import { Link,Redirect,Route } from 'react-router-dom'
 export default class Questionindex  extends Component {
     constructor(props){
         super(props)
@@ -12,30 +12,47 @@ export default class Questionindex  extends Component {
       this.getquestions()
     }
     render() {
-      console.log("aaa"+this.props.match.params.token)
+     
         let tablemap=this.state.questions.map((val,key)=>{
         return(<Questionrow val={val} key={key} keygen={key} token={this.props.match.params.token }/>)
         });
         return(
-            <table >
+          <div className='card'>
+            <div>
+              <header >
+              <Link to={'/questionnew/'+this.props.match.params.token} className='newbutton'> <button className="newbutton">NEW</button></Link>
+              </header>
+            </div>
+            <div >
+            
+            <table className="questiontable">
             <thead>
             <tr className="hidden-xs hidden-sm hidden-md">
               <th>
                 <span>Question </span>
+       
               </th>
-              <span> Answer</span>
               <th>
-              <span> Distractors</span>
+              <span> Answer</span>
+             
+              </th>
+              <th>
+              <span> Distractors</span> 
               </th>
               <th>
               <span> Actions</span>
               </th>
             </tr>
+          
             </thead>
+          
             <tbody>
+          
            {tablemap}
             </tbody>
           </table>
+          </div>
+          </div>
         )
     }
     getquestions(){

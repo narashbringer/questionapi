@@ -1,0 +1,65 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 80px;
+}
+
+.App-header {
+  background-color: lightblue;
+  height: 10%;
+  margin-top:0;
+  padding-bottom:10px;
+  color: white;
+}
+
+.App-title {
+  margin-top:0;
+  font-size: 1.5em;
+}
+
+.App-intro {
+  font-size: large;
+}
+.card{
+  border-radius:5px;
+  border:2px solid #e4e4e4;
+  width:33%;
+  margin-left:33%;
+  background-color:#f1f1f1; 
+  padding:10px;
+}
+.form-group{
+  padding:5px;
+  display:grid;
+  grid-column: auto;
+}
+.body-padding{
+  padding:10px;
+}
+.title{
+  
+}
+.linktext{
+  font-size:10px;
+  align: left;
+}
+.inputs{
+  border:1px solid #f1f1f1;
+  border-radius: 5px;
+}
+.submit-group{
+  color:#ffffff;
+
+}
+.button{
+  background-color: lightblue;
+  color:#ffffff;
+  border-radius:5px;
+}
+@keyframes App-logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}

@@ -13,7 +13,7 @@ export default class EditQuestion extends Component {
     componentWillMount(){
         this.get()
     }
-    
+
     render(){
        
 
@@ -78,7 +78,7 @@ export default class EditQuestion extends Component {
 };
     Update(){
         var stuff ='Bearer '+ this.props.match.params.token
-      
+      var token=this.props.match.params.token
         var loc='https://infinite-caverns-13207.herokuapp.com/questions/'+this.props.match.params.id
         fetch(loc, {
             method: 'PUT',
@@ -89,10 +89,8 @@ export default class EditQuestion extends Component {
                },
                body:JSON.stringify({question:this.state.questions,answer:this.state.answer,distractor:this.state.distractor}),
           
-    }).then(dataWrappedByPromise => dataWrappedByPromise.json())
-    .then(data => {
-        console.log(data)
-     window.location='/questions/'+this.props.match.params.token
-    })
+    }).then(
+     window.location='/questions/'+ token
+    )
 };
 }

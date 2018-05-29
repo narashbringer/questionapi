@@ -48,7 +48,7 @@ export default class Questionnew  extends Component {
     };
     Newq(){
         var stuff ='Bearer '+ this.props.match.params.token
-      
+        var token =this.props.match.params.token;
         var loc='https://infinite-caverns-13207.herokuapp.com/questions/'
         fetch(loc, {
             method: 'POST',
@@ -59,11 +59,10 @@ export default class Questionnew  extends Component {
                },
             body:JSON.stringify({question:this.state.questions,answer:this.state.answer,distractor:this.state.distractor}),
           
-    }).then(dataWrappedByPromise => dataWrappedByPromise.json()).then(data => {
-        console.log(data)
-        window.location='/questionindex/'+this.props.match.params.token;
+    }).then(
+        window.location='/questionindex/'+token;
   
-    })
+    )
 }
 
     

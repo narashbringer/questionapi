@@ -4,7 +4,7 @@ import Signup from './Signup.js'
 import Login from './Login.js'
 import Questionpage from './questionspage.js'
 import { Switch, Route } from 'react-router-dom'
-import EditQuestion from './EditQuestion.js'
+import EditQuestion from './editquestion.js'
 import Questionnew from './questionnew.js'
 export default class Home extends Component {
   constructor(){

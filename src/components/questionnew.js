@@ -63,10 +63,8 @@ export default class Questionnew  extends Component {
             body:JSON.stringify({question:this.state.questions,answer:this.state.answer,distractor:this.state.distractor}),
           
     }).then(dataWrappedByPromise =>{
-        if( dataWrappedByPromise.status === 201 ){
         this.setState({
             returnhome:true})
-        }
     })
 }
 

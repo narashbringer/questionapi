@@ -28,7 +28,7 @@ export default class Questionnew  extends Component {
             </div>
             <button onClick={()=>this.Newq()}>Create Question</button>
            </div>
-        </form>{ returnhome && (
+        </form>{ this.state.returnhome && (
         <Redirect to={"/questionindex/"+ this.props.match.params.token}/>)
         }
       </div></div>

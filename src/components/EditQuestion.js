@@ -16,6 +16,7 @@ export default class EditQuestion extends Component {
 
     render(){
        
+        
 
         return (<div> <Link to={'/questionindex/'+this.props.match.params.token} > <button className='newbutton'>Back</button></Link>
             <div className="card">

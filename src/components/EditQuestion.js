@@ -89,8 +89,9 @@ export default class EditQuestion extends Component {
                },
                body:JSON.stringify({question:this.state.questions,answer:this.state.answer,distractor:this.state.distractor}),
           
-    }).then(
+    }).then(dataWrappedByPromise => dataWrappedByPromise.json())
+    .then(data => {
         window.location="/questionindex/"+ token
-    )
+    })
 };
 }

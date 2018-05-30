@@ -7,7 +7,8 @@ export default class Questionnew  extends Component {
         this.state={
             questions:'',
             answer:'',
-            distractor:''
+            distractor:'',
+            returnhome:false
         };
     };
     render(){
@@ -27,7 +28,9 @@ export default class Questionnew  extends Component {
             </div>
             <button onClick={()=>this.Newq()}>Create Question</button>
            </div>
-        </form>
+        </form>{ returnhome && (
+        <Redirect to={"/questionindex/"+ this.props.match.params.token}/>)
+        }
       </div></div>
     )
     };
@@ -61,7 +64,8 @@ export default class Questionnew  extends Component {
           
     }).then(dataWrappedByPromise =>{
         if( dataWrappedByPromise.status === 201 ){
-         window.location="https://serene-shore-99391.herokuapp.com/questionindex/"+ token
+        this.setState({
+            returnhome:true})
         }
     })
 }

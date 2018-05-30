@@ -59,10 +59,12 @@ export default class Questionnew  extends Component {
                },
             body:JSON.stringify({question:this.state.questions,answer:this.state.answer,distractor:this.state.distractor}),
           
-    }).then(data =>{
-        window.location.href="https://serene-shore-99391.herokuapp.com/questionindex/"+token
-    }
-    )
+    }).then(dataWrappedByPromise => dataWrappedByPromise.json())
+    .then(data => {
+        if( data.status === 201 ){
+         window.location="https://serene-shore-99391.herokuapp.com/questionindex/"+ token
+        }
+    })
 }
 
     

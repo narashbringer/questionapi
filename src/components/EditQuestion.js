@@ -91,7 +91,7 @@ export default class EditQuestion extends Component {
           
     }).then(dataWrappedByPromise => dataWrappedByPromise.json())
     .then(data => {
-        window.location="/questionindex/"+ token
+        window.location="https://serene-shore-99391.herokuapp.com/questionindex/"+ token
     })
 };
 }

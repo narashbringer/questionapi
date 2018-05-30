@@ -60,7 +60,7 @@ export default class Questionnew  extends Component {
             body:JSON.stringify({question:this.state.questions,answer:this.state.answer,distractor:this.state.distractor}),
           
     }).then(data =>{
-        window.location="/questionindex/"+token
+        window.location="https://serene-shore-99391.herokuapp.com/questionindex/"+token
     }
     )
 }
